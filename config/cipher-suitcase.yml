@@ -1,0 +1,32 @@
+# Configuration for CipherSuitease Backup Tool
+
+# Exacution Setting
+settings:
+  remoteStorage: true # uploads the encrypted Backup to a remote server
+  storeEncryptionKeyToServer: true # Enabling bring Security risk but increases usability
+  storeDecryptionKeyToServer: true # Enabling bring Security risk but increases usability
+  email: "test@test.com"
+  password: "123456"
+
+# Backup settings
+backup:
+  directories:
+    - /localTest/folder1
+    - /localTest/folder2
+    - /localTest/folder 21
+  temp_directory: /localTest/temp
+  destination_directory: /localTest/data/
+  backup_interval: 24h  # Time duration for the backup interval (e.g., 24h, 1h30m)
+
+
+# Encryption settings
+encryption:
+  enabled: true
+  method: aes  # Example encryption method (e.g., aes, rsa)
+  keyLocation: localTest/keys/
+
+# Logging settings
+logging:
+  level: info  # Log levels: debug, info, warning, error
+  file: /path/to/log/file.log
+  
